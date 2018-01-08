@@ -1,7 +1,5 @@
 FROM ubuntu:17.04
 
-RUN sed -ri '$a nameserver 114.114.114.114' /etc/resolv.conf
-
 RUN apt-get update
 
 RUN apt-get install -y openssh-server
