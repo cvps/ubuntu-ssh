@@ -12,6 +12,11 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 EXPOSE 22
+EXPOSE 888
+EXPOSE 80
+EXPOSE 3333
+EXPOSE 443
+EXPOSE 21
 
 RUN apt-get install -y wget
 RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh
