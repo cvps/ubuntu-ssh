@@ -16,5 +16,6 @@ EXPOSE 22
 RUN apt-get install -y wget
 RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh
 
-CMD    ["/usr/sbin/sshd", "-D","bash install"]
+CMD    ["/usr/sbin/sshd", "-D","bash install.sh"]
 
+WORKDIR /www/server/panel && python tools.pyc panel 7215147123
