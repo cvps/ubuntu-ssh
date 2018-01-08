@@ -16,4 +16,4 @@ EXPOSE 22
 CMD    ["/usr/sbin/sshd", "-D"]
 
 RUN apt-get install -y wget
-RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && sudo bash install.sh
+RUN wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && sudo bash install.sh -y
