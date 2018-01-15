@@ -2,8 +2,6 @@ FROM hub.c.163.com/public/ubuntu:16.04
 
 RUN apt-get update
 
-RUN echo "nameserver 114.114.114.114" | /etc/resolv.conf > /dev/null 
-
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 
